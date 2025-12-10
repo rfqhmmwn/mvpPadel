@@ -1,4 +1,11 @@
+<?php
+session_start;
 
+if (isset($_SESSION['loginUser']) == false) 
+    {
+        header("Location: login.php");  
+    }
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>

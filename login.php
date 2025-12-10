@@ -1,7 +1,11 @@
 <?php
 session_start();    
 
-if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+if (isset($_SESSION['loginAdmin']) == true) {
+    header("Location: admin.php");
+    exit();
+}
+if (isset($_SESSION['loginUser']) == true) {
     header("Location: index.php");
     exit();
 }

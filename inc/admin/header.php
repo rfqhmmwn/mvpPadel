@@ -4,8 +4,9 @@ if (isset($_SESSION['loginAdmin']) == false)
     {
         header("Location: login.php");  
     }
-// include 'inc/config.php';
-// include 'function/function.php';
+include 'inc/config.php';
+include 'function/function.php';  
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
