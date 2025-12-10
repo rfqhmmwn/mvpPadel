@@ -36,8 +36,8 @@ $admin = new admin;
                                             <?php foreach($admin->get_transaksi() as $row) : ?>
                                                 <tr>
                                                     <td><?php echo $row['id']; ?></td>
-                                                    <td><?php echo $row['user']; ?></td>
-                                                    <td><?php echo $row['lapangan']; ?></td>
+                                                    <td><?php echo $row['user_id']; ?></td>
+                                                    <td><?php echo $row['lapangan_id']; ?></td>
                                                     <td><?php echo $row['tanggal']; ?></td>
                                                     <td><?php echo $row['jam']; ?></td>
                                                     <td><?php echo $row['status']; ?></td>
