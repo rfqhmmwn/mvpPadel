@@ -1,43 +1,41 @@
 <?php
-session_start();    
+session_start();
+require 'inc/config.php';
 
-if (isset($_SESSION['loginAdmin']) == true) {
-    header("Location: admin.php");
+if (isset($_SESSION['user_id'])) {
+    if ($_SESSION['role'] == 'admin') {
+        header("Location: admin.php");
+    } else {
+        header("Location: index.php");
+    }
     exit();
 }
-if (isset($_SESSION['loginUser']) == true) {
-    header("Location: index.php");
-    exit();
-}
 
 
-    if (isset($_POST['submit']) == TRUE)
-    {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $is_submit = $_POST['submit'];
-        
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-        if ($email == 'admin@gmail.com' && $password == 'admin123')
-        {
-            $_SESSION['loginAdmin'] = true;
+    $result = $db->query("SELECT * FROM users WHERE user = '$username' AND password = '$password'");
+
+    if ($result->num_rows > 0) {
+        $user_data = $result->fetch_assoc();
+
+        $_SESSION['user_id'] = $user_data['id'];
+        $_SESSION['username'] = $user_data['user'];
+        $_SESSION['role'] = $user_data['role'];
+
+        if ($_SESSION['role'] == 'admin') {
             header("Location: admin.php");
-        }
-        elseif($email == 'user@gmail.com' && $password == 'user')
-        {
-            $_SESSION['loginUser'] = true;
+        } else {
             header("Location: index.php");
         }
-        elseif($email == '' || $password == '')
-        {
-            echo "Username dan password harus diisi.";
-        }
-        else
-        {
-            echo "Login gagal. Username atau password salah.";
-        }
+        exit();
+    } else {
+        $error = "Username atau password salah!";
     }
-                                    
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -85,13 +83,14 @@ if (isset($_SESSION['loginUser']) == true) {
                                     </div>
                                     <form class="user" action="login.php" method="post">
                                         <div class="form-group">
-                                            <input type="email" name="email" class="form-control form-control-user"
+                                            <input type="text" name="username" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address...">
+                                                placeholder="Enter Username...">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
+                                            <input type="password" name="password"
+                                                class="form-control form-control-user" id="exampleInputPassword"
+                                                placeholder="Password">
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -100,7 +99,7 @@ if (isset($_SESSION['loginUser']) == true) {
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <button type="submit" name="submit" class="btn btn-primary btn-user btn-block">
+                                        <button type="submit" name="login" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </button>
                                         <hr>
