@@ -1,9 +1,10 @@
 <?php
 session_start();
-if (isset($_SESSION['loginAdmin']) == false) 
-    {
-        header("Location: login.php");  
-    }
+
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
+    header("Location: login.php");
+    exit();
+}
 include 'inc/config.php';
 include 'function/function.php';  
 
