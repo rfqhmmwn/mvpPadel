@@ -54,7 +54,7 @@ if (isset($_SESSION['loginUser']) == false)
                     </div>
                 </div>
                 
-                <a href="schedule.php?court=1" class="schedule-btn">
+                <a href="booking.php?court=1" class="schedule-btn">
                     4 Jadwal Tersedia
                     <i class="fas fa-chevron-down"></i>
                 </a>
@@ -96,7 +96,7 @@ if (isset($_SESSION['loginUser']) == false)
                     </div>
                 </div>
                 
-                <a href="schedule.php?court=2" class="schedule-btn">
+                <a href="booking.php?court=2" class="schedule-btn">
                     5 Jadwal Tersedia
                     <i class="fas fa-chevron-down"></i>
                 </a>
@@ -138,7 +138,7 @@ if (isset($_SESSION['loginUser']) == false)
                     </div>
                 </div>
                 
-                <a href="schedule.php?court=3" class="schedule-btn">
+                <a href="booking.php?court=3" class="schedule-btn">
                     6 Jadwal Tersedia
                     <i class="fas fa-chevron-down"></i>
                 </a>
