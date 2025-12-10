@@ -1,5 +1,5 @@
 <?php
-session_start;
+session_start();
 
 if (isset($_SESSION['loginUser']) == false) 
     {
@@ -29,16 +29,7 @@ if (isset($_SESSION['loginUser']) == false)
                 </div>
                 <div class="padel-ball-icon"></div>
                 
-                <button class="nav-arrow nav-arrow-left" onclick="changeCourtImage(1, -1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="nav-arrow nav-arrow-right" onclick="changeCourtImage(1, 1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
                 
-                <button class="view-photos-btn" onclick="viewAllPhotos(1)">
-                    Lihat semua foto
-                </button>
             </div>
             
             <div class="court-info-section">
@@ -81,17 +72,6 @@ if (isset($_SESSION['loginUser']) == false)
                     </div>
                 </div>
                 <div class="padel-ball-icon"></div>
-                
-                <button class="nav-arrow nav-arrow-left" onclick="changeCourtImage(2, -1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="nav-arrow nav-arrow-right" onclick="changeCourtImage(2, 1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                
-                <button class="view-photos-btn" onclick="viewAllPhotos(2)">
-                    Lihat semua foto
-                </button>
             </div>
             
             <div class="court-info-section">
@@ -134,17 +114,6 @@ if (isset($_SESSION['loginUser']) == false)
                     </div>
                 </div>
                 <div class="padel-ball-icon"></div>
-                
-                <button class="nav-arrow nav-arrow-left" onclick="changeCourtImage(3, -1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="nav-arrow nav-arrow-right" onclick="changeCourtImage(3, 1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                
-                <button class="view-photos-btn" onclick="viewAllPhotos(3)">
-                    Lihat semua foto
-                </button>
             </div>
             
             <div class="court-info-section">
