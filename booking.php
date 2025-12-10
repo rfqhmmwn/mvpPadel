@@ -96,7 +96,7 @@ foreach($availableSlots as $slot) {
     </div>
 
     <div class="col-lg-7">
-\      <div class="mb-3">
+      <div class="mb-3">
         <h4 class="mb-1">
           <?php echo $courtData['lapangan'] ?> <small class="text-muted">›</small>
         </h4>
