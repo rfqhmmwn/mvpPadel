@@ -1,6 +1,6 @@
 <?php
 session_start();
-require __DIR__ . '../function/function_admin.php';
+require     '../function/function_admin.php';
 $admin = new admin();
 
 $get_method = $_SERVER['REQUEST_METHOD'];
