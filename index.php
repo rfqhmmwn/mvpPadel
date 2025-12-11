@@ -104,7 +104,7 @@ if (isset($_SESSION['user_id']) == false)
                 </div>
                 
                 <a href="booking.php?court=1" class="schedule-btn">
-                    <span>4 Jadwal Tersedia</span>
+                    <span>BOOKING NOW</span>
                     <i class="fas fa-chevron-down"></i>
                 </a>
             </div>
@@ -147,7 +147,7 @@ if (isset($_SESSION['user_id']) == false)
                 </div>
                 
                 <a href="booking.php?court=2" class="schedule-btn">
-                    <span>5 Jadwal Tersedia</span>
+                    <span>BOOKING NOW</span>
                     <i class="fas fa-chevron-down"></i>
                 </a>
             </div>
@@ -189,7 +189,7 @@ if (isset($_SESSION['user_id']) == false)
                 </div>
                 
                 <a href="booking.php?court=3" class="schedule-btn">
-                    <span>6 Jadwal Tersedia</span>
+                    <span>BOOKING NOW</span>
                     <i class="fas fa-chevron-down"></i>
                 </a>
             </div>
