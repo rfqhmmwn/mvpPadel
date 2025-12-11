@@ -1,3 +1,6 @@
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
 * {
     margin: 0;
     padding: 0;
@@ -5,23 +8,212 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     background: #f5f5f5;
-    padding: 30px;
+    padding: 0;
+    min-height: 100vh;
 }
 
+/* ============================================
+   HEADER STYLES
+   ============================================ */
+.main-header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    padding: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-text-header {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.logo-small-header {
+    font-size: 12px;
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: -3px;
+}
+
+.logo-medium-header {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo-large-header {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: -3px;
+}
+
+.padel-ball-small {
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.padel-ball-small::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: #1e3c72;
+    border-radius: 50%;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.user-info:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.user-role {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #c21d23;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.logout-btn:hover {
+    background: #a8161c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(194, 29, 35, 0.4);
+    color: white;
+}
+
+/* ============================================
+   WELCOME SECTION
+   ============================================ */
+.welcome-section {
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.05) 0%, rgba(42, 82, 152, 0.05) 100%);
+    padding: 40px 0;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.welcome-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.welcome-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+.welcome-title .highlight {
+    color: #2a5298;
+}
+
+.welcome-subtitle {
+    font-size: 18px;
+    color: #666;
+    font-weight: 400;
+}
+
+/* ============================================
+   CONTAINER
+   ============================================ */
 .container {
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 30px 40px;
 }
 
+/* ============================================
+   COURT CARD STYLES
+   ============================================ */
 .court-card {
     display: flex;
     background: #fff;
     border-radius: 12px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    transition: all 0.3s;
+}
+
+.court-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
 }
 
 .court-image-section {
@@ -198,4 +390,98 @@ body {
 
 .schedule-btn i {
     margin-left: 8px;
+}
+
+/* ============================================
+   FOOTER STYLES
+   ============================================ */
+.main-footer {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 30px 0;
+    margin-top: 60px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .user-info {
+        flex: 1;
+    }
+    
+    .welcome-title {
+        font-size: 28px;
+    }
+    
+    .welcome-subtitle {
+        font-size: 16px;
+    }
+    
+    .container {
+        padding: 0 20px 40px;
+    }
+    
+    .court-card {
+        flex-direction: column;
+    }
+    
+    .court-image-section {
+        width: 100%;
+        min-height: 200px;
+    }
+    
+    .court-info-section {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 }

@@ -63,7 +63,6 @@ foreach($availableSlots as $slot) {
     </a>
     <div class="text-end">
       <span class="me-3">Login sebagai: <strong><?php echo $_SESSION['username']; ?></strong></span>
-      <a href="logout.php" class="btn btn-danger btn-sm">Logout</a>
     </div>
   </div>
 
