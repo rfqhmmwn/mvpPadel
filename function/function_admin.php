@@ -1,4 +1,5 @@
 <?php
+include("../inc/config.php");
 class admin
 {
     function get_transaksi() {
