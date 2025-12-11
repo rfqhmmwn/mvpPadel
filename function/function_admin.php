@@ -15,5 +15,13 @@ class admin
 
         echo '<script>window.location.href = "groups.php"</script>';
     }
+
+    function register($username, $password) {
+        global $db;
+        $query = "INSERT INTO `users` (id, user, password, role) VALUES (null, '$username', '$password', 'user')";
+        $result = $db->query($query);
+
+        echo '<script>window.location.href = "login.php"</script>';
+    }
 }
 ?>
